@@ -28,6 +28,7 @@ urlpatterns = [
     path('index/',views.index),
 
 
+    path('',views.index2),
 
     path('index2/',views.index2),
     path('appointment/', views.appointment_view, name='appointment'),
