@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Button</title>
+    <style>
+        body {
+            text-align: center; /* 文字置中 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+        button {
+            background-color: blue; /* 按钮背景色为蓝色 */
+            color: white; /* 按钮文字颜色为白色 */
+            border: none; /* 去掉边框 */
+            border-radius: 10px; /* 添加圆角 */
+            padding: 10px 20px; /* 内边距，增加按钮大小 */
+            font-size: 20px; /* 设置字体大小 */
+            cursor: pointer; /* 鼠标悬停时变成手型光标 */
+            transition: background-color 0.3s; /* 添加过渡效果 */
+        }
+
+        button:hover {
+            background-color: darkblue; /* 鼠标悬停时改变按钮背景色 */
+        }
+    </style>
+</head>
+<body>
+    <h1>叫號系統</h1>
+    <!-- 显示页面主标题 "Increase Number" -->
+    {% comment %} <h3>按鈕導向至"/increase_button/"</h3> {% endcomment %}
+
+    <!-- 创建一个按钮，当用户点击该按钮时，会导航到 /increase_button/ 路径 -->
+    <a href="/increase_button/">
+        <button>下一位</button>
+    </a>
+    <!-- 按钮使用的是链接 `<a>` 标签包裹。点击按钮时，浏览器会加载 "/increase_button/" 路径的页面 -->
+</body>
+</html>

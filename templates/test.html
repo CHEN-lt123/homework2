@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入/註冊</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            /* 替換為你的背景圖片 */
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-color: #CAE5CD;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab">登入</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab">註冊</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="login" role="tabpanel">
+                <form>
+                    <div class="form-group">
+                        <label for="username">使用者名稱</label>
+                        <input type="text" class="form-control" id="username" placeholder="輸入使用者名稱">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密碼</label>
+                        <input type="password" class="form-control" id="password" placeholder="輸入密碼">
+                    </div>
+                    <a href="reset-password.html">忘記密碼？</a>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">登入</button>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="register" role="tabpanel">
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">姓名</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="輸入姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">電子郵件</label>
+                        <input type="email" class="form-control" id="email" placeholder="輸入電子郵件">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">聯絡方式</label>
+                        <input type="text" class="form-control" id="phone" placeholder="輸入聯絡方式">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">設定密碼</label>
+                        <input type="password" class="form-control" id="password" placeholder="設定密碼">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">確認密碼</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="再次輸入密碼">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">註冊</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

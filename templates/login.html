@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入/註冊</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('background.jpg'); /* 替換為你的背景圖片 */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .login-container .social-login button {
+            text-align: left;
+        }
+        .bg-side {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-image: url('path-to-your-left-image.jpg'); /* 替換為左側圖片 */
+            background-size: cover;
+            background-position: center;
+        }
+        @media (max-width: 768px) {
+            .bg-side {
+                display: none;
+            }
+            .login-container {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-side"></div> <!-- 左側背景圖片 -->
+    <div class="login-container">
+        <h2 class="text-center">登入</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">電子郵件地址</label>
+                <input type="email" class="form-control" id="email" placeholder="輸入電子郵件地址">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">繼續</button>
+        </form>
+        <hr>
+        <div class="text-center">或</div>
+        <div class="social-login">
+            <button class="btn btn-outline-secondary btn-block">
+                <img src="images/google-icon.svg" alt="Google" width="20"> 繼續使用 Google
+            </button>
+            <button class="btn btn-outline-secondary btn-block">
+                <img src="images/facebook-icon.png" alt="Facebook" width="20"> 繼續使用 Facebook
+            </button>
+            <button class="btn btn-outline-secondary btn-block">
+                <img src="images/line-icon.png" alt="LINE" width="20"> 繼續使用 LINE
+            </button>
+        </div>
+        <hr>
+        <div class="text-center">
+            <a href="#">您是新用戶嗎？建立帳戶</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

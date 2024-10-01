@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>幼獅綜合醫院資訊網</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'css/logo-06.svg' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/sweetalert.css' %}" rel="stylesheet"> -->
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-light navbar-expand-md sticky-top shadow-nav">
+            <img src="{% static 'css/logo-03.svg' %}" alt="" width="30%">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="form-inline my-2 my-lg-0" name="TopSearchForm" method="get">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#news">最新消息</a></li>
+                    <li class="nav-item"><a class="nav-link" href="test.html">掛號預約</a></li>
+                    <li class="nav-item"><a class="nav-link" href="select-department.html">掛哪一科</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="{% static 'images/ho1.jpg' %}" alt="問診"></div>
+                <div class="carousel-item"><img src="{% static 'images/ho3.jpg' %}" alt="病房"></div>
+                <div class="carousel-item"><img src="{% static 'images/ho2.jpg' %}" alt="形象"></div>
+                <div class="carousel-item"><img src="{% static 'images/ho4.jpg' %}" alt="走廊"></div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <!-- 其他內容保持不變，記得也更新圖片路徑 -->
+        
+        <!-- <script src="js/script.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <!--   <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    news: [
+                        { title: '醫院公告1', content: '這是第一則公告的內容。' },
+                        { title: '醫院公告2', content: '這是第二則公告的內容。' },
+                        { title: '醫院公告3', content: '這是第三則公告的內容。' }
+                    ],
+                    appointment: {
+                        name: '',
+                        department: '',
+                        date: ''
+                    },
+                    departments: ['內科', '外科', '其他專科'],
+                    userMessage: '',
+                    chatVisible: false,
+                    messages: [
+                        { sender: 'bot', text: '您好，有什麼可以幫助您的嗎？' }
+                    ]
+                },
+                methods: {
+                    submitAppointment() {
+                        alert('預約提交成功！');
+                    },
+                    toggleChatWindow() {
+                        this.chatVisible = !this.chatVisible;
+                        const chatWindow = document.getElementById('chat-window');
+                        chatWindow.style.display = this.chatVisible ? 'flex' : 'none';
+                    },
+                    sendMessage() {
+                        if (this.userMessage.trim()) {
+                            this.messages.push({ sender: 'user', text: this.userMessage });
+                            this.userMessage = '';
+
+                            // 模擬AI回覆，可以在這裡整合後端AI回應
+                            setTimeout(() => {
+                                this.messages.push({ sender: 'bot', text: '這是一個自動回應。' });
+                            }, 1000);
+                        }
+                    }
+                }
+            });
+        </script> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        產生的樂透號碼為:
+        {% for num_list in random_num_lists%}
+    <p>
+        第 {{ forloop.counter }} 組:
+        {% for data in num_list%}
+            {{data}}
+            {% if forloop.last == False %},{% endif %}
+        {% endfor %}
+    </p>
+    {% endfor %}
+    </h1>
+    
+</body>
+</html>

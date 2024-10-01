@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCD Control</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // 定义一个函数 updateNumber，用于更新显示的数字
+        function updateNumber() {
+            // 使用jQuery的get方法从 "/current_number/" 获取当前数字
+            $.get("/current_number/", function(data) {
+                // 将获取到的数据 (data.number) 显示在 id 为 number_display 的元素中
+                $("#number_display").text(data.current_number);
+            });
+        }
+
+        // 使用 setInterval，每隔 2 秒调用一次 updateNumber 函数
+        setInterval(updateNumber, 2000);
+    </script>
+    <style>
+        body {
+            text-align: center; /* 文字置中 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+        #number_display {
+            color: red; /* 设置数字颜色为红色 */
+            font-size: 2em; /* 设置数字字体大小 */
+        }
+    </style>
+</head>
+<body>
+    <h1>當前號碼</h1>
+    <!-- 主标题显示 "ESP8266 LCD Control" -->
+    {% comment %} <h3>透過 function updateNumber 抓取"/current_number/" 回饋至下方number_display</h3> {% endcomment %}
+
+    <h2> <<span id="number_display">0</span>></h2>
+    <!-- 显示当前数字，默认值为 0。数字会通过 Ajax 请求动态更新 -->
+</body>
+</html>
